@@ -1,1 +1,73 @@
-<p>This is the product/list view.</p>
+<h1>Product List</h1>
+
+<!-- Modal -->
+<div class="modal fade" id="addProductDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add New Product</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label for="code" class="col-sm-4 control-label">Product Code</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="code" placeholder="Product Code">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="name" class="col-sm-4 control-label">Product Name</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="name" placeholder="Product Name">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="price" class="col-sm-4 control-label">Product Price</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="price" placeholder="Product Price">
+		    </div>
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-bordered table-striped">
+	
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Name</th>
+			<th>
+				<button class="btn" data-toggle="modal" data-target="#addProductDialog">
+					<span class="glyphicon glyphicon-plus"></span>
+					add
+				</button>
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>P-001</td>
+			<td>Product 001</td>
+			<td>
+				<button class="btn" data-toggle="modal" data-target="#addProductDialog">
+					<span class="glyphicon glyphicon-pencil"></span>
+					edit
+				</button>
+				<button class="btn">
+					<span class="glyphicon glyphicon-remove"></span>
+					delete
+				</button>
+			</td>
+		</tr>
+	</tbody>
+
+</table>
