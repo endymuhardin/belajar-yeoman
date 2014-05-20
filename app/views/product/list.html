@@ -13,19 +13,19 @@
 		  <div class="form-group">
 		    <label for="code" class="col-sm-4 control-label">Product Code</label>
 		    <div class="col-sm-8">
-		      <input type="text" class="form-control" id="code" placeholder="Product Code">
+		      <input type="text" class="form-control" id="code" placeholder="Product Code" ng-model="selectedProduct.code">
 		    </div>
 		  </div>
 		  <div class="form-group">
 		    <label for="name" class="col-sm-4 control-label">Product Name</label>
 		    <div class="col-sm-8">
-		      <input type="text" class="form-control" id="name" placeholder="Product Name">
+		      <input type="text" class="form-control" id="name" placeholder="Product Name" ng-model="selectedProduct.name">
 		    </div>
 		  </div>
 		  <div class="form-group">
 		    <label for="price" class="col-sm-4 control-label">Product Price</label>
 		    <div class="col-sm-8">
-		      <input type="text" class="form-control" id="price" placeholder="Product Price">
+		      <input type="text" class="form-control" id="price" placeholder="Product Price" ng-model="selectedProduct.price">
 		    </div>
 		  </div>
 		</form>
@@ -58,7 +58,7 @@
 			<td>{{x.code}}</td>
 			<td>{{x.name}}</td>
 			<td>
-				<button class="btn" data-toggle="modal" data-target="#addProductDialog">
+				<button class="btn" ng-click="edit(x)" data-toggle="modal" data-target="#addProductDialog">
 					<span class="glyphicon glyphicon-pencil"></span>
 					edit
 				</button>
