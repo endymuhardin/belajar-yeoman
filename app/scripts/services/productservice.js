@@ -16,6 +16,11 @@ angular.module('belajarYeomanApp')
         } else {
           return $http.put('api/product/'+data.id, data);
         }
+      },
+      remove: function(data){
+        if(data.id != null){
+          return $http.delete('api/product/'+data.id);
+        }
       }
     }
   });

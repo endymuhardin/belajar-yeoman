@@ -20,4 +20,11 @@ angular.module('belajarYeomanApp')
     	$scope.selectedProduct = null;
     	$scope.original = null;
     }
+
+    $scope.hapus = function(x){
+    	ProductService.remove(x).success(function(){
+    		$scope.products = ProductService.query();
+    		$scope.baru();
+    	});
+    }
   });
