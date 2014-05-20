@@ -8,4 +8,16 @@ angular.module('belajarYeomanApp')
     		$scope.original = angular.copy(hasil);
     	});
     }
+
+    $scope.save = function(){
+    	ProductService.save($scope.selectedProduct).success(function(){
+    		$scope.products = ProductService.query();
+    		$scope.baru();
+    	});
+    };
+
+    $scope.baru = function(){
+    	$scope.selectedProduct = null;
+    	$scope.original = null;
+    }
   });

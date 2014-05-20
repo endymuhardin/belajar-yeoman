@@ -32,7 +32,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        <button type="button" class="btn btn-primary" ng-click="save()" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
 			<th>Code</th>
 			<th>Name</th>
 			<th>
-				<button class="btn" data-toggle="modal" data-target="#addProductDialog">
+				<button class="btn" ng-click="baru()" data-toggle="modal" data-target="#addProductDialog">
 					<span class="glyphicon glyphicon-plus"></span>
 					add
 				</button>

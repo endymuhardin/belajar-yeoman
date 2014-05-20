@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('belajarYeomanApp')
-  .factory('ProductService', function ($resource) {
+  .factory('ProductService', function ($resource, $http) {
     return {
       productResource: $resource('api/product/:id'),
       get: function(param, callback){
@@ -9,6 +9,13 @@ angular.module('belajarYeomanApp')
       },
       query: function(){
         return this.productResource.query();
+      },
+      save: function(data){
+        if(data.id == null){
+          return $http.post('api/product', data);
+        } else {
+          return $http.put('api/product/'+data.id, data);
+        }
       }
     }
   });
