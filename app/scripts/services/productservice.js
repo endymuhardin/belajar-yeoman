@@ -1,16 +1,11 @@
 'use strict';
 
 angular.module('belajarYeomanApp')
-  .factory('ProductService', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
+  .factory('ProductService', function ($resource) {
     return {
-      someMethod: function () {
-        return meaningOfLife;
+      productResource: $resource('api/product/:id'),
+      query: function(){
+        return this.productResource.query();
       }
-    };
+    }
   });
