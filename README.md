@@ -36,3 +36,7 @@ Contoh aplikasi kecil menggunakan Yeoman.
 4. Masuk ke folder belajar-yeoman, jalankan Grunt Server : `grunt serve`
 5. Browser secara otomatis akan menampilkan aplikasi belajar-yeoman. Klik link `Product`
 6. Test tombol `add`, `edit`, dan `delete`
+
+## Cara Pembuatan ##
+
+Langkah-langkah pembuatan aplikasi ini bisa ditonton [di Youtube](https://www.youtube.com/playlist?list=PL9oC_cq7OYby1r_lG7eH2B2hz47MsRBek)
